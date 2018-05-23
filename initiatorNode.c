@@ -13,8 +13,8 @@ int main(int argc, char **argv) {
   memset(&servaddr, 0, sizeof(servaddr));
   servaddr.sin_family = AF_INET;
   servaddr.sin_port = htons(6768);
-  //ip of the mediator node which will forward the request to destination node 
-  servaddr.sin_addr.s_addr = inet_addr("10.92.80.59");
+  //ip of the mediator node VM2 which will forward the request to destination node 
+  servaddr.sin_addr.s_addr = inet_addr("192.168.56.141");
 
   while(1) {
 
