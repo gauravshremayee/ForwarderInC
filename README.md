@@ -13,3 +13,31 @@ Sequence
 3) compile recieverNode on Node 3 and Execute Binary (will be Listening for Node 2) 
 
 
+
+
+on VM2
+
+gaurav@ubuntu:~$ gcc forwarderNode.c -o f
+
+In Parent process acting as client  to whom request will be forwarded
+gaurav@ubuntu:~$ In child Process serving as Server for one of the client
+
+
+On VM1
+
+gaurav@ubuntu:~$ gcc initiatorNode.c -o i
+gaurav@ubuntu:~$ ./i
+Hello
+
+
+on VM3 
+
+gaurav@ubuntu:~$ gcc recieverNode.c -o r
+gaurav@ubuntu:~$ ./r 
+Heyy
+
+
+
+
+
+
