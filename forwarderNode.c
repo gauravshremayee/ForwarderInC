@@ -52,8 +52,8 @@ int main(int argc, char **argv) {
   servaddr.sin_family = AF_INET;
   servaddr.sin_port = htons(6767);
   
-  //ip of destination node
-  servaddr.sin_addr.s_addr = inet_addr("10.92.80.58");
+  //ip of destination node VM3
+  servaddr.sin_addr.s_addr = inet_addr("192.168.56.143");
  printf("In Parent process acting as client  to whom request will be forwarded\n");
   while(1) {
 
