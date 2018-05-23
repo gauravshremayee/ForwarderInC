@@ -14,27 +14,32 @@ Sequence
 
 
 
-
-on VM2
-
-gaurav@ubuntu:~$ gcc forwarderNode.c -o f
-
-In Parent process acting as client  to whom request will be forwarded
-gaurav@ubuntu:~$ In child Process serving as Server for one of the client
+first execute all the binaries (sequence not important ,but VM2,VM1,VM3)
 
 
 On VM1
 
+#start sending the message from VM1 
+
 gaurav@ubuntu:~$ gcc initiatorNode.c -o i
 gaurav@ubuntu:~$ ./i
-Hello
+Heyy from VM1
 
 
-on VM3 
+on VM2 it will be recieved and forwarded to VM3
+gaurav@ubuntu:~$ ./f
+In Parent process acting as client  to whom request will be forwarded
+gaurav@ubuntu:~$ In child Process serving as Server for one of the client
+Hey from VM1�
+
+
+
+
+on VM3 msg sent by VM1 and forwarded by VM2  will be recieved 
 
 gaurav@ubuntu:~$ gcc recieverNode.c -o r
 gaurav@ubuntu:~$ ./r 
-Heyy
+Heyy from VM1
 
 
 
